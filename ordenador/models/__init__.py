@@ -1,0 +1,1 @@
+from . import  ordenador, procesador, placa
