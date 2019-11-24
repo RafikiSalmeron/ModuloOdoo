@@ -1,1 +1,1 @@
-from . import  ordenador, procesador, placa
+from . import  ordenador, procesador, placa, fuente, grafica
