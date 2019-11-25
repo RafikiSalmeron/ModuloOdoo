@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenador_prueba_action" name="prueba" res_model="ordenador.prueba" />
+
+        <record id="ordenador_prueba_view_tree" model="ir.ui.view">
+            <field name="name">Lista de pruebas</field>
+            <field name="model">ordenador.prueba</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="modelo" />
+                    <field name="potencia" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="ordenador_prueba_search" model="ir.ui.view">
+            <field name="name">Busqueda de pruebas</field>
+            <field name="model">ordenador.prueba</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="modelo" />
+                    <field name="potencia" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Pruebas" id="menu_pruebas" parent="menu_fabrica" sequence="10"/>
+        <menuitem name="Prueba" id="menu_prueba" action="ordenador_prueba_action" parent="menu_pruebas" sequence="10"/>
+    </data>
+</odoo>
